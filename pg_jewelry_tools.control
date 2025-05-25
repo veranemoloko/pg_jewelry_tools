@@ -1,0 +1,5 @@
+# tools for working and analyzing with metal and gems
+comment = 'jewelry tools'
+default_version = '0.0.1'
+module_pathname = '$libdir/pg_jewelry_tools'
+relocatable = true
