@@ -12,15 +12,9 @@ PG_CONFIG = pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
 
-.PHONY: pg_check
-pg_check:
-	make install && sudo -u postgres make installcheck
-
 .PHONY: rebuild
 rebuild:
-	make clean && make && make install \
-	&& psql -U postgres -c "DROP EXTENSION IF EXISTS pg_jewelry_tools" \
-	&& psql -U postgres -c "CREATE EXTENSION pg_jewelry_tools"
+	make clean && make install 
 
 .PHONY: clean
 clean:
