@@ -33,7 +33,7 @@ SELECT calculate_gemstone_gr_to_carat(2);
 ### 🤘 Metal Calculations
 
 - Supported metals: gold, silver, platinum
-- Formula: pure_weight = (sample / 1000) * weight
+- Formula: `weight = (purity / 1000) * weight_mm3`
 - Handles edge cases:
     - Returns NULL for any NULL parameter
     - Returns NULL for unknown metal types
